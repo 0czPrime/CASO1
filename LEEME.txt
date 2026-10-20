@@ -1,0 +1,21 @@
+BLOG DEL SEMILLERO - VERSION LARAVEL (archivos de la aplicacion)
+
+Esta carpeta NO es un proyecto Laravel completo: son SOLO los archivos que debes copiar
+dentro de un proyecto Laravel nuevo (la misma estructura de carpetas).
+
+1) Crear el proyecto Laravel (requiere PHP y Composer instalados):
+   composer create-project laravel/laravel blog-semillero
+   cd blog-semillero
+
+2) Copiar las carpetas app, database, resources, routes, public y tests de este zip
+   dentro de blog-semillero, aceptando REEMPLAZAR routes/web.php.
+
+3) Crear las tablas (por defecto Laravel usa SQLite en database/database.sqlite):
+   php artisan migrate
+
+4) Ejecutar:
+   php artisan serve
+   Abrir http://127.0.0.1:8000
+
+5) Pruebas automaticas (casos PR-01 a PR-17, excepto PR-14 que es manual):
+   php artisan test
