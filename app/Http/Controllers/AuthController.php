@@ -44,11 +44,10 @@ class AuthController extends Controller
         ]);
 
 if (! Auth::attempt($credenciales)) {
-            // Mensaje genérico: no revela si el correo existe.
             return back()->withErrors(['email' => 'Correo o contraseña incorrectos.'])->onlyInput('email');
         }
 
-        $request->session()->regenerate(); // evita fijación de sesión
+        $request->session()->regenerate();
 
         return redirect()->route('entradas.index');
     }
